@@ -7,13 +7,15 @@ import javax.persistence.Entity;
 import javax.persistence.Inheritance;
 import javax.persistence.InheritanceType;
 import javax.persistence.Table;
+import javax.persistence.UniqueConstraint;
 
 import com.sarahemati.restaurant.model.abstracts.BaseEntity;
 
 @Entity
 @Inheritance(strategy = InheritanceType.JOINED)
 @DiscriminatorColumn(name = "USER_TYPE", discriminatorType = DiscriminatorType.STRING)
-@Table(name = "USERS")
+@Table(name = "USERS", uniqueConstraints = { @UniqueConstraint(columnNames = {
+		"FIRSTNAME", "LASETNAME" }) })
 // @NamedQueries(@NamedQuery(name="",query=""))
 public class User extends BaseEntity {
 	private static final long serialVersionUID = 1L;
