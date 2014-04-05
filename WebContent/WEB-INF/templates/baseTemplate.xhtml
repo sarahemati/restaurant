@@ -7,27 +7,24 @@
 <f:view contentType="text/html" locale="#{baseTemplate.locale}">
 	<ui:insert name="bundel" />
 	<f:loadBundle var="msg"
-		basename="com.safakaveh.securespace.view.resources.language" />
+		basename="com.sarahemati.restaurant.view.resources.language" />
 	<h:head>
 		<link rel="shortcut icon"
 			href="#{request.getContextPath()}/resources/image/shine-icon-set/16x16/database_lock.png" />
+
 		<style>
 			.ui-widget,.ui-widget .ui-widget {
 					font-size: 90% !important;
 			}
 			<ui:insert name="style" />
 		</style>
-		<h:outputStylesheet library="css" name="menu_rtl.css"
-			rendered="#{baseTemplate.RTL}" />
-		<h:outputScript library="js" name="menu_rtl.js"
-			rendered="#{baseTemplate.RTL}" />
-		
 		<ui:insert name="head" />
 		<title><ui:insert name="title" /></title>
 	</h:head>
 	<h:body dir="#{msg.dir}">
+		<p:growl id="growl" showDetail="true" />
 		<ui:insert name="body" />
-		<p:idleMonitor timeout="180000" onidle="PF('idleDialog').show()"/>  
+		<p:idleMonitor timeout="600000" onidle="PF('idleDialog').show()"/>  
 		<p:dialog header="#{msg['base.template.idl.title']}" resizable="false"  
             widgetVar="idleDialog" modal="true" width="400">  
     		<h:outputText value="#{msg['base.template.idl.msg']} #{request.getContextPath()}" />  

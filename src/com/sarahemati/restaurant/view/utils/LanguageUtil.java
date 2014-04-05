@@ -13,7 +13,6 @@ public class LanguageUtil implements Serializable {
 		}else{
 			return new Locale(lang);
 		}
-		
 	}
 
 	public static boolean isRtl() {
