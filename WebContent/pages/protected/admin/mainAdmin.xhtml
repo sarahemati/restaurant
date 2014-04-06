@@ -8,20 +8,21 @@
 		basename="com.sarahemati.restaurant.view.resources.language" />
 
 	<ui:define name="title">
+		<h:outputText value="#{msg['admin.title']}" />
 	</ui:define>
 	<ui:define name="body">
 		<p:tabView dir="#{msg.dir}">
-			<p:tab title="food">
-				Food
+			<p:tab title="#{msg['admin.lbl.food']}">
+				<ui:include src="./food/food.xhtml" />
 			</p:tab>
-			<p:tab title="drink">
-				Drink
+			<p:tab title="#{msg['admin.lbl.drink']}">
+				<ui:include src="./drink/drink.xhtml" />
 			</p:tab>
-			<p:tab title="customer">
-				Customer
+			<p:tab title="#{msg['admin.lbl.customer']}">
+				<ui:include src="./customer/customer.xhtml" />
 			</p:tab>
-			<p:tab title="order">
-				Order
+			<p:tab title="#{msg['admin.lbl.order']}">
+				<ui:include src="./order/order.xhtml" />
 			</p:tab>
 		</p:tabView>
 	</ui:define>
