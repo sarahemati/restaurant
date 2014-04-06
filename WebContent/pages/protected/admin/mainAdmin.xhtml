@@ -4,9 +4,25 @@
 	xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
 	xmlns:p="http://primefaces.org/ui"
 	template="/WEB-INF/templates/baseTemplate.xhtml">
+	<f:loadBundle var="msg"
+		basename="com.sarahemati.restaurant.view.resources.language" />
+
 	<ui:define name="title">
 	</ui:define>
 	<ui:define name="body">
-		Helloooo Admin
+		<p:tabView dir="#{msg.dir}">
+			<p:tab title="food">
+				Food
+			</p:tab>
+			<p:tab title="drink">
+				Drink
+			</p:tab>
+			<p:tab title="customer">
+				Customer
+			</p:tab>
+			<p:tab title="order">
+				Order
+			</p:tab>
+		</p:tabView>
 	</ui:define>
 </ui:composition>
