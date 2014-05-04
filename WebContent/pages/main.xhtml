@@ -1,24 +1,59 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"> 
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml"
-      xmlns:h="http://java.sun.com/jsf/html"
-      xmlns:f="http://java.sun.com/jsf/core"
-      xmlns:ui="http://java.sun.com/jsf/facelets" 
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
 	xmlns:p="http://primefaces.org/ui">
-<h:head></h:head> 
-<body> 
-    <p:breadCrumb>  
-        <p:menuitem value="Home" url="main.html" />  
-        <p:menuitem value="foods menu" url="main/foodsMenu.html" />  
-        <p:menuitem value="drink menu" url="main/drinkMenu.html" />  
-        <p:menuitem value="about us" url="main/aboutUs.html" />  
-         
-          
-    </p:breadCrumb> 
-      
-<p:galleria value="#{galleriaBean.images}" var="image" panelWidth="1200" panelHeight="313" showCaption="true">  
-    <p:graphicImage value="main/img/images.jpeg" alt="Image Description for #{image}" title="#{image}"/>  
-</p:galleria>  
-  
-      
-</body> 
+<h:head>
+
+	<style>
+html {
+	height: 100%;
+	width: 100%;
+}
+
+body {
+	background-color: black;
+}
+
+.ui-galleria {
+	z-index: 20 !important;
+	overflow: visible !important;;
+}
+
+.ui-galleria .ui-layout-unit-content {
+	overflow: visible !important;
+}
+</style>
+
+</h:head>
+<body>
+	<p:dock position="top">
+		<p:menuitem value="Home"
+			icon="/resources/image/coquette-icons-set/128x128/home.png" url="#" />
+		<p:menuitem value="Food"
+			icon="/resources/image/travel-and-tourism-part-2/png/128x128/egg_toast_breakfast.png"
+			url="#" />
+		<p:menuitem value="Drink"
+			icon="/resources/image/travel-and-tourism-part-2/png/128x128/wine.png"
+			url="#" />
+		<p:menuitem value="Email" icon="/images/dock/email.png" url="#" />
+		<p:menuitem value="Portfolio" icon="/images/dock/portfolio.png"
+			url="#" />
+		<p:menuitem value="Link" icon="/images/dock/link.png" url="#" />
+		<p:menuitem value="RSS" icon="/images/dock/rss.png" url="#" />
+		<p:menuitem value="History" icon="/images/dock/history.png" url="#" />
+	</p:dock>
+	<table border="2"
+		style="background-color: width; margin-left: auto; margin-right: auto; margin-top: 5%">
+		<tr>
+			<td><p:galleria value="#{galleriaBean.images}" var="image"
+					showCaption="true">
+					<p:graphicImage value="main/img/images.jpeg"
+						alt="Image Description for #{image}" title="#{image}" />
+				</p:galleria></td>
+		</tr>
+	</table>
+
+</body>
 </html>
