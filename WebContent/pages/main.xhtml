@@ -44,13 +44,13 @@ body {
 		<p:menuitem value="RSS" icon="/images/dock/rss.png" url="#" />
 		<p:menuitem value="History" icon="/images/dock/history.png" url="#" />
 	</p:dock>
-	<table border="2"
+	<table border="2" width="712px" 
 		style="background-color: width; margin-left: auto; margin-right: auto; margin-top: 5%">
 		<tr>
-			<td><p:galleria value="#{galleriaBean.images}" var="image"
+			<td><p:galleria value="#{mainPage.images}" var="image" panelWidth="700" panelHeight="430"
 					showCaption="true">
-					<p:graphicImage value="main/img/images.jpeg"
-						alt="Image Description for #{image}" title="#{image}" />
+					<p:graphicImage value="/resources/image/slideshow/#{image}"
+						alt="Image Description for #{image}" title="#{image}" width="700px" />
 				</p:galleria></td>
 		</tr>
 	</table>
