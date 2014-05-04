@@ -37,20 +37,17 @@ body {
 		<p:menuitem value="Drink"
 			icon="/resources/image/travel-and-tourism-part-2/png/128x128/wine.png"
 			url="#" />
-		<p:menuitem value="Email" icon="/images/dock/email.png" url="#" />
-		<p:menuitem value="Portfolio" icon="/images/dock/portfolio.png"
-			url="#" />
-		<p:menuitem value="Link" icon="/images/dock/link.png" url="#" />
-		<p:menuitem value="RSS" icon="/images/dock/rss.png" url="#" />
-		<p:menuitem value="History" icon="/images/dock/history.png" url="#" />
+		<p:menuitem value="Register" icon="/resources/image/coquette-icons-set/128x128/add_user.png" url="#" />
+		<p:menuitem value="Login" icon="/resources/image/coquette-icons-set/128x128/lock.png" url="login.html" />
+		<p:menuitem value="About" icon="/resources/image/coquette-icons-set/128x128/info.png" url="#" />
 	</p:dock>
-	<table border="2" width="712px" 
+	<table border="2" width="712px"
 		style="background-color: width; margin-left: auto; margin-right: auto; margin-top: 5%">
 		<tr>
-			<td><p:galleria value="#{mainPage.images}" var="image" panelWidth="700" panelHeight="430"
-					showCaption="true">
+			<td><p:galleria value="#{mainPage.images}" var="image"
+					panelWidth="700" panelHeight="430" >
 					<p:graphicImage value="/resources/image/slideshow/#{image}"
-						alt="Image Description for #{image}" title="#{image}" width="700px" />
+						width="700px" />
 				</p:galleria></td>
 		</tr>
 	</table>
