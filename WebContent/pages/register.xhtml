@@ -11,6 +11,7 @@
 	</ui:define>
 	<ui:define name="body">
 	<div align="center">
+	<p:panel header="#{msg['registration.title']}" style="width:25% ; margin-top:7%">
 		<h:form >
 			<p:panelGrid columns="2">
 				<p:outputLabel value="#{msg['registration.lbl.firstname']}" />
@@ -31,8 +32,10 @@
 				
 			</p:panelGrid>
 			<p:commandButton value="#{msg['registration.btn.save']}"
-				action="#{registerPage.btnSaveClick()}" update="@all" />
+				action="#{registerPage.btnSaveClick()}" update="@all" style="margin-top:7px"/>
 		</h:form>
+		</p:panel>
 		</div>
+		
 	</ui:define>
 </ui:composition>

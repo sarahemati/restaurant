@@ -29,6 +29,20 @@
 	</h:head>
 	<h:body dir="#{msg.dir}">
 		<p:growl id="growl" showDetail="true" />
+			<p:dock position="top">
+		<p:menuitem value="Home"
+			icon="/resources/image/coquette-icons-set/128x128/home.png" url="main.html" />
+		<p:menuitem value="Food"
+			icon="/resources/image/travel-and-tourism-part-2/png/128x128/egg_toast_breakfast.png"
+			url="#" />
+		<p:menuitem value="Drink"
+			icon="/resources/image/travel-and-tourism-part-2/png/128x128/wine.png"
+			url="#" />
+		<p:menuitem value="Register" icon="/resources/image/coquette-icons-set/128x128/add_user.png" url="register.html" />
+		<p:menuitem value="Login" icon="/resources/image/coquette-icons-set/128x128/lock.png" url="login.html" />
+		<p:menuitem value="About" icon="/resources/image/coquette-icons-set/128x128/info.png" url="#" />
+	</p:dock>
+		
 		<ui:insert name="body" />
 		<p:idleMonitor timeout="600000" onidle="PF('idleDialog').show()"/>  
 		<p:dialog header="#{msg['base.template.idl.title']}" resizable="false"  

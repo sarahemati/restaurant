@@ -58,6 +58,13 @@ public class RegisterPage implements Serializable {
 
 	public String btnSaveClick() {
 		try {
+			if(!getLogin().getUsernamepassword().getPassword().equals(getConfrimPassword())){
+				FacesContext.getCurrentInstance().addMessage(
+						null,
+						new FacesMessage(FacesMessage.SEVERITY_ERROR, "error",
+								"error"));
+				return null;
+			}
 			getLogin().setUser(getCustomer());
 			service.save(getLogin());
 			customer = null;
