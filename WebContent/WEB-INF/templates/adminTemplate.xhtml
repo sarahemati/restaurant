@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:p="http://primefaces.org/ui">
+<f:view contentType="text/html" locale="#{baseTemplate.locale}">
+	<ui:insert name="bundel" />
+	<f:loadBundle var="msg"
+		basename="com.sarahemati.restaurant.view.resources.language" />
+	<h:head>
+		<link rel="shortcut icon"
+			href="#{request.getContextPath()}/resources/image/shine-icon-set/16x16/database_lock.png" />
+
+		<style style="background-color:#7F7F7F;">
+		
+			.ui-widget,.ui-widget .ui-widget {
+					font-size: 90% !important;
+			}
+			
+			body {
+				background-color: orange;		
+			}
+			
+			<ui:insert name="style" />
+		</style>
+		<ui:insert name="head" />
+		<title><ui:insert name="title" /></title>
+	</h:head>
+	<h:body dir="#{msg.dir}">
+		<p:growl id="growl" showDetail="true" />
+		<ui:insert name="body" />
+		<p:idleMonitor timeout="600000" onidle="PF('idleDialog').show()"/>  
+		<p:dialog header="#{msg['base.template.idl.title']}" resizable="false"  
+            widgetVar="idleDialog" modal="true" width="400">  
+    		<h:outputText value="#{msg['base.template.idl.msg']} #{request.getContextPath()}" />  
+		</p:dialog>  
+	</h:body>
+</f:view>
+</html>
