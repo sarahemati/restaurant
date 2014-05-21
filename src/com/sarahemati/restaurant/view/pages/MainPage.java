@@ -16,8 +16,15 @@ public class MainPage {
 	public List<String> getImages() {
 		if (images == null) {
 			images = new ArrayList<String>();
-			images.add("a.jpg");
 			images.add("b.jpg");
+			images.add("c.jpeg");
+			images.add("l.jpeg");
+			images.add("d.jpg");
+			images.add("g.jpeg");
+			images.add("e.jpg");
+			images.add("h.jpeg");
+			images.add("j.jpeg");
+			images.add("k.jpg");
 		}
 		return images;
 	}
